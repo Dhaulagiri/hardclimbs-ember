@@ -1,11 +1,27 @@
-export default function(/* server */) {
+export default function(server) {
 
-  /*
-    Seed your development database using your factories.
-    This data will not be loaded in your tests.
+  ['Bouldering', 'Sport Climbing'].forEach((style) => {
+    server.create('style', { name: style });
+  });
 
-    Make sure to define a factory for each model you want to create.
-  */
+  ['V15', '16'].forEach((grade) => {
+    server.create('grade', { name: grade });
+  });
 
-  // server.createList('post', 10);
+  let climbs = server.createList('climb', 10);
+  climbs.forEach((climb) => {
+    climb.styleId = server.db.styles[1].id;
+    climb.gradeId = server.db.grades[0].id;
+    climb.save();
+  });
+
+  climbs = server.createList('climb', 10);
+  climbs.forEach((climb) => {
+    climb.styleId = server.db.styles[0].id;
+    climb.gradeId = server.db.grades[0].id;
+    climb.save();
+  });
+
+  server.createList('climber', 100);
+  server.createList('area', 50);
 }

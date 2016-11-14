@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('ascents');
+  this.route('climbs');
+  this.route('climbers');
+  this.route('areas');
 });
 
 export default Router;
