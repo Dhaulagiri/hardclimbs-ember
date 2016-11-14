@@ -1,5 +1,5 @@
 import JSONAPIAdapter from 'ember-data/adapters/json-api';
-import config from 'hardclimbs-ember/config/environment';
+import config from 'hardclimbs/config/environment';
 
 export default JSONAPIAdapter.extend({
   namespace: config.namespace,

@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'hardclimbs-ember',
+    modulePrefix: 'hardclimbs',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
