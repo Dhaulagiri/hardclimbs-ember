@@ -1,4 +1,4 @@
-/* jshint node: true */
+/* eslint-env node */
 
 module.exports = function(environment) {
   var ENV = {
@@ -29,6 +29,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.api = process.env.API_URL;
+    ENV.namespace = process.env.NAMESPACE;
   }
 
   if (environment === 'test') {
@@ -43,7 +45,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.api = process.env.API_URL;
+    ENV.namespace = process.env.NAMESPACE;
   }
 
   return ENV;
