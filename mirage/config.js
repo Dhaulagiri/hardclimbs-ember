@@ -9,11 +9,13 @@ export default function() {
   this.get('ascents');
   this.get('climbs');
   this.get('climbers');
+  this.get('medias');
 
   if (config.api !== undefined) {
     this.passthrough('areas');
     this.passthrough('ascents');
     this.passthrough('climbs');
     this.passthrough('climbers');
+    this.passthrough('medias');
   }
 }

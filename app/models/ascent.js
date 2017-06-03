@@ -7,6 +7,7 @@ export default DS.Model.extend({
   dateEnd: attr('date'),
   ascentNumber: attr('number'),
   note: attr('string'),
+  ascentNumberFormat: attr('string'),
 
   climber: belongsTo('climber'),
   climb: belongsTo('climb'),

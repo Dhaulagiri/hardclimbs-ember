@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('climbs');
   this.route('climbers');
   this.route('areas');
+  this.route('medias');
 });
 
 export default Router;
